@@ -39,10 +39,15 @@ namespace HackerRank.StacksAndQueues
                     if (!stack.Any())
                     {
                         stack.Push(bracket);
+                        break;
                     }
                     else if (stack.Peek() == closeToOpenBrackets[bracket])
                     {
                        stack.Pop();
+                    }
+                    else
+                    {
+                        break;
                     }
                 }
             }
